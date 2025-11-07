@@ -8,89 +8,85 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Sacred color palette - Vedic astrology theme */
+    --background: 40 20% 97%;
+    --foreground: 25 30% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 30% 98%;
+    --card-foreground: 25 30% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 30% 98%;
+    --popover-foreground: 25 30% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Saffron - Sacred primary color */
+    --primary: 25 85% 55%;
+    --primary-foreground: 40 30% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Maroon - Deep spiritual secondary */
+    --secondary: 355 65% 35%;
+    --secondary-foreground: 40 30% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Sandalwood beige - Muted backgrounds */
+    --muted: 40 25% 92%;
+    --muted-foreground: 25 20% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Gold - Divine accent */
+    --accent: 45 90% 55%;
+    --accent-foreground: 25 30% 20%;
 
+    /* Destructive kept neutral */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 40 30% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 25 85% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Navy blue for planetary elements */
+    --planetary: 230 40% 25%;
+    --planetary-foreground: 40 30% 98%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gold gradient for highlights */
+    --gold-start: 45 90% 55%;
+    --gold-end: 35 85% 50%;
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sacred glow effect */
+    --sacred-glow: 45 100% 70%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 25 25% 12%;
+    --foreground: 40 30% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 25 25% 15%;
+    --card-foreground: 40 30% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 25 25% 15%;
+    --popover-foreground: 40 30% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 25 85% 55%;
+    --primary-foreground: 25 25% 12%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 355 65% 40%;
+    --secondary-foreground: 40 30% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 25 20% 20%;
+    --muted-foreground: 40 20% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 45 90% 55%;
+    --accent-foreground: 25 25% 12%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 40 30% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 25 20% 25%;
+    --input: 25 20% 25%;
+    --ring: 25 85% 55%;
+
+    --planetary: 230 50% 30%;
+    --planetary-foreground: 40 30% 95%;
   }
 }
 
@@ -100,6 +96,72 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-serif;
+  }
+}
+
+@layer utilities {
+  /* Sacred gradient backgrounds */
+  .gradient-sacred {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold-start)) 0%, hsl(var(--gold-end)) 100%);
+  }
+
+  .gradient-cosmic {
+    background: linear-gradient(180deg, hsl(var(--planetary)) 0%, hsl(var(--background)) 100%);
+  }
+
+  /* Sacred text shadow */
+  .text-sacred-glow {
+    text-shadow: 0 0 20px hsl(var(--sacred-glow) / 0.5);
+  }
+
+  /* Sacred border with gold */
+  .border-sacred {
+    border: 2px solid hsl(var(--accent));
+    box-shadow: 0 0 15px hsl(var(--accent) / 0.3);
+  }
+
+  /* Gemstone glow effect */
+  .gemstone-glow {
+    box-shadow: 
+      0 0 20px hsl(var(--accent) / 0.4),
+      0 0 40px hsl(var(--accent) / 0.2),
+      inset 0 0 20px hsl(var(--accent) / 0.1);
+  }
+
+  /* Mandala pattern background */
+  .pattern-mandala {
+    background-image: radial-gradient(circle at center, hsl(var(--accent) / 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  /* Smooth animations */
+  .transition-sacred {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer components {
+  /* Sacred section styling */
+  .section-sacred {
+    @apply py-20 px-6 pattern-mandala;
+  }
+
+  /* Sacred heading */
+  .heading-sacred {
+    @apply text-4xl md:text-5xl font-bold text-center mb-4;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Sacred card */
+  .card-sacred {
+    @apply bg-card rounded-xl p-6 border-2 border-accent/20 transition-sacred hover:border-accent/50 hover:shadow-xl;
   }
 }
