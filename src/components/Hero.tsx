@@ -41,7 +41,7 @@ export const Hero = () => {
 
         {/* Subtitle */}
         <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto font-serif">
-          Guided by Sanatana wisdom, powered by authentic insights. 
+          Guided by the Stars, Blessed by the Divine.
           <span className="block mt-2 text-accent font-semibold">धर्मो रक्षति रक्षितः</span>
         </p>
 

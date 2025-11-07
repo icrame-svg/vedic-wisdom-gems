@@ -11,7 +11,7 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="md:col-span-2">
             <div className="text-3xl font-bold text-accent mb-4">
-              ॐ Vedic Jyotish
+              ॐ Lovable Jyotish
             </div>
             <p className="text-planetary-foreground/80 mb-6 leading-relaxed">
               Authentic Vedic astrology guidance rooted in Sanatana Dharma. 
@@ -117,7 +117,7 @@ export const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-planetary-foreground/60">
             <p>
-              © {currentYear} Vedic Jyotish. All rights reserved. Made with devotion ॐ
+              © {currentYear} Lovable Jyotish. All rights reserved. Made with devotion ॐ
             </p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-accent transition-colors">

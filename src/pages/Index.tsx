@@ -1,25 +1,28 @@
-import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
-import { Services } from "@/components/Services";
-import { Gemstones } from "@/components/Gemstones";
-import { FreeTools } from "@/components/FreeTools";
-import { Testimonials } from "@/components/Testimonials";
-import { Contact } from "@/components/Contact";
-import { Footer } from "@/components/Footer";
+import { useState, useEffect } from "react";
+import { LoadingScreen } from "@/components/LoadingScreen";
+import Home from "./Home";
 
 const Index = () => {
-  return (
-    <div className="min-h-screen">
-      <Hero />
-      <About />
-      <Services />
-      <Gemstones />
-      <FreeTools />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </div>
-  );
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Check if user has already seen loading screen in this session
+    const hasSeenLoading = sessionStorage.getItem("hasSeenLoading");
+    if (hasSeenLoading) {
+      setIsLoading(false);
+    }
+  }, []);
+
+  const handleLoadComplete = () => {
+    setIsLoading(false);
+    sessionStorage.setItem("hasSeenLoading", "true");
+  };
+
+  if (isLoading) {
+    return <LoadingScreen onLoadComplete={handleLoadComplete} />;
+  }
+
+  return <Home />;
 };
 
 export default Index;
